@@ -1,0 +1,33 @@
+
+body {
+    border: 2px solid red;
+    width: 560px;
+    height: 560px;
+}
+
+.block {
+    width: 70px;
+    height: 70px;
+   
+    
+}
+.black {
+    background: rgb(252, 63, 63);
+  
+}
+.white {
+    background: rgb(240, 230, 230);
+}
+table {
+    border-spacing: 0 0;
+    width: 560px;
+    height: 560px;
+}
+td {
+    padding: 0;
+    text-align: center;
+    font-size: 40px;
+}
+.rotate {
+    transform: rotate(180deg);
+}
