@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson6</title>
+    <link rel="stylesheet" href="lesson6.css">
+
+</head>
+
+
+
+<body>
+
+    <button><img id="b1" src="small_jpg/p1.jpg" alt="photo"></button>
+    <button><img id="b2" src="small_jpg/p2.jpg" alt="photo"></button>
+    <button><img id="b3" src="small_jpg/p3.jpg" alt="photo"></button>
+
+
+
+    <script async>
+
+        var buttons = document.querySelectorAll("button");
+
+        for (var i = 0; i < 3; i++) {
+            buttons[i].onclick = function (event) {
+                var img = document.createElement("img");
+                img.src = "p" + event.target.id[1] + ".jpg";
+                img.className = "big";
+                img.onerror = function () {
+                    alert("Фото не найдено.");
+                }
+                img.onclick = function (event) {
+                    this.classList.add("hide");// по клику на картинку мы ее скрываем
+                }
+                document.body.append(img);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
